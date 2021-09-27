@@ -13,17 +13,17 @@
     <br>
     <br>
     <br>
-    <inputrange :min="10" :max="50" :value="23" @change="value => a = value" @sliding="value => b = value" />
+    <inputrange :min="10" :max="50" :value="23" @change="value => a = value" @sliding="value => b = value"></inputrange>
     <hr>
     <br>
     <h3>Events</h3>
     <br>
     <p>
-        <strong>@sliding:</strong> {{b}}
+        <strong>@ sliding:</strong> {{b}}
     </p>
     <hr>
     <p>
-        <strong>@change (stop sliding):</strong> {{a}}
+        <strong>@ change (stop sliding):</strong> {{a}}
     </p>
 </div>
 <script>
