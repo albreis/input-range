@@ -1,6 +1,6 @@
 {
   "name": "@ersolucoesweb/input-range",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "description": "Input Range",
   "author": "ER Soluções Web LTDA <contato@ersolucoesweb.com.br>",
@@ -34,10 +34,6 @@
     "./sfc": "src/InputRange.vue"
   },
   "unpkg": "dist/input-range.min.js",
-  "dependencies": {
-    "@ersolucoesweb/input-range": "^0.1.0",
-    "@ersolucoesweb/vuegic": "^3.5.1"
-  },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
