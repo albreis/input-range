@@ -1,6 +1,6 @@
 {
   "name": "@ersolucoesweb/input-range",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": false,
   "description": "Input Range",
   "author": "ER Soluções Web LTDA <contato@ersolucoesweb.com.br>",
@@ -117,5 +117,8 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "dependencies": {
+    "@ersolucoesweb/input-range": "^0.3.0"
   }
 }
