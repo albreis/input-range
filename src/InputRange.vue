@@ -77,7 +77,7 @@ export default {
            * inicia o ponteiro a 50% do valor máximo
            */
           this.$refs.handler.style.left = `50%`
-          this.valor = (this.max / 2)
+          this.valor = ((this.max - this.value) / 2)
       }
 
       /**
@@ -93,7 +93,22 @@ export default {
                   /**
                    * Remove o event listener
                    */
-                this.$refs.center.removeEventListener('mousemove', this.listener, true)
+                this.$refs.center.removeEventListener('mousemove', this.$refs.center, true)
+              } catch(e) {
+                  console.log(e)
+              }
+            }
+        })
+        window.addEventListener('touchend', () => {
+            /**
+             * Verifica se a referencia existe
+             */
+            if(this.$refs.center) {
+              try {
+                  /**
+                   * Remove o event listener
+                   */
+                this.$refs.center.removeEventListener('touchmove', this.$refs.center, true)
               } catch(e) {
                   console.log(e)
               }
@@ -130,12 +145,21 @@ export default {
       },
       /* eslint-disable */
       lock(e) {
+            if('targetTouches' in e) {
+                e = {offsetX: e.targetTouches[0].clientX - e.targetTouches[0].target.offsetLeft}
+            }
         //   console.log('Lock: ', e)
           this.calculate(e)
           this.locked = true
           this.listener =  this.$refs.center.addEventListener('mousemove', e => {
             if(this.locked) {
                 this.calculate(e)
+                this.$emit('sliding', this.valor)
+            }
+          })
+          this.listener =  this.$refs.center.addEventListener('touchmove', e => {
+            if(this.locked) {
+                this.calculate({offsetX: e.targetTouches[0].clientX - e.targetTouches[0].target.offsetLeft})
                 this.$emit('sliding', this.valor)
             }
           })
@@ -148,7 +172,8 @@ export default {
         this.$emit('change', this.valor)
           if(this.listener) {
               try {
-                this.$refs.center.removeEventListener('mousemove', this.listener, true)
+                this.$refs.center.removeEventListener('mousemove', this.$refs.center, true)
+                this.$refs.center.removeEventListener('touchmove', this.$refs.center, true)
               } catch(e) {
                   console.log(e)
               }
