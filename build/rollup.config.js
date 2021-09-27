@@ -6,7 +6,7 @@ import { terser } from "rollup-plugin-terser";
 export default {
     input: 'src/wrapper.js', // Path relative to package.json
     output: {
-        name: 'Vuegic',
+        name: 'InputRange',
         exports: 'named',
     },
     plugins: [
