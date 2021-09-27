@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue - InputRange</title>
+  <script src="//unpkg.com/vue"></script>
+  <script src="//unpkg.com/@ersolucoesweb/input-range"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Input Range</h1>
+    <br>
+    <br>
+    <br>
+    <inputrange :min="10" :max="50" :value="23" @change="value => a = value" @sliding="value => b = value" />
+    <hr>
+    <br>
+    <h3>Events</h3>
+    <br>
+    <p>
+        <strong>@sliding:</strong> {{b}}
+    </p>
+    <hr>
+    <p>
+        <strong>@change (stop sliding):</strong> {{a}}
+    </p>
+</div>
+<script>
+/**
+ * Para usar esse componente faça o seguinte
+ */
+window.addEventListener('load', function(){
+
+new Vue({
+    el: '#app',
+    components: {
+        inputrange: InputRange.default
+    },
+    data() {
+        return{
+            a: 0,
+            b: 0
+        }
+    }
+})
+})
+</script>
+<style>
+body {
+    font-family: sans-serif;
+    padding: 100px;
+}
+</style>
+</body>
+</html>

@@ -17,6 +17,7 @@ npm i -s @ersolucoesweb/input-range
 ```
 
 ## Exemplo:
+
 ```vue
 <template>
 <div>
@@ -53,7 +54,7 @@ body {
 }
 </style>
 ```
-Acesse a documentação em https://albreis.github.io/input-range/
+Veja funcionando em https://albreis.github.io/input-range/
 
 ## Suporte 
 https://www.ersolucoesweb.com.br
