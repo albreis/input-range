@@ -1,6 +1,6 @@
 {
   "name": "@ersolucoesweb/input-range",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": false,
   "description": "Input Range",
   "author": "ER Soluções Web LTDA <contato@ersolucoesweb.com.br>",
@@ -10,9 +10,9 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build:doc": "vue-docgen -c docgen.config.js && npm run docs:build",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/input-range.esm.js",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/input-range.umd.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/input-range.min.js",
+    "build:es": "rollup --config ./build/rollup.config.js --format es --file dist/input-range.esm.js",
+    "build:umd": "rollup --config ./build/rollup.config.js --format umd --file dist/input-range.umd.js",
+    "build:unpkg": "rollup --config ./build/rollup.config.js --format iife --file dist/input-range.min.js",
     "commit": "git commit -m",
     "commit:doc": "git commit -m 'Updating docs'",
     "docs:build": "vuepress build documentation --dest ./docs",
@@ -63,7 +63,7 @@
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.10",
     "vuepress": "^1.8.2",
-    "webpack": "^5.37.1"
+    "webpack": "^4.0.0"
   },
   "bugs": {
     "url": "https://github.com/albreis/input-range/issues"
@@ -117,8 +117,5 @@
     "presets": [
       "@babel/preset-env"
     ]
-  },
-  "dependencies": {
-    "@ersolucoesweb/input-range": "^0.3.0"
   }
 }

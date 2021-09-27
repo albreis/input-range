@@ -1,9 +1,9 @@
 ---
 home: true
-heroText: Vuedar
+heroText: Input Range
 tagline: Calendário
 actionText: Quero usar →
-actionLink: /src/vuedar.html
+actionLink: /src/input-range.html
 features:
 - title: Simples
   details: Fácil de entender

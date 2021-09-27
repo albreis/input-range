@@ -26,7 +26,7 @@
  * Created at 2021-09-26 19:32:14
  */
 export default {
-  name: '',
+  name: 'InputRange',
   props: {
       min: {
           default: 0
